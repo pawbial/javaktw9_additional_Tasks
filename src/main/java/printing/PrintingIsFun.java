@@ -23,17 +23,30 @@ public class PrintingIsFun {
 
     void printTree(int height) {
         for (int i = 0; i < height; i++) {
-            for (int j = 0; j < height * 2; j++) {
-                if (j < (height - i) || j > (height + i)) {
-                    System.out.print(" ");
+
+        }
+    }
+
+    void printBox(int width, int heigth) {
+
+        for (int i = 0; i < width; i++) {
+            System.out.print("* ");
+        }
+        System.out.println();
+        for (int i = 0; i < heigth-2; i++){
+            for (int j = 0; j <= width; j++) {
+                if (j == 0 || j == width){
+                    System.out.print("* ");
                 } else {
-                    System.out.print("*");
+                    System.out.print(" ");
                 }
 
             }
             System.out.println();
         }
-
+        for (int i = 0; i < width; i++) {
+            System.out.print("* ");
+        }
 
     }
 
@@ -41,7 +54,7 @@ public class PrintingIsFun {
 
         PrintingIsFun printingIsFun = new PrintingIsFun();
 
-        printingIsFun.printRectangle(8, 2);
+        printingIsFun.printRectangle(8, 3);
 
         System.out.println();
 
@@ -50,6 +63,10 @@ public class PrintingIsFun {
         System.out.println();
 
         printingIsFun.printTree(8);
+
+        System.out.println();
+
+        printingIsFun.printBox(5, 12);
 
     }
 
