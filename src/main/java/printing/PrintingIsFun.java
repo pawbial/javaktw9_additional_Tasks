@@ -47,15 +47,15 @@ public class PrintingIsFun {
                 } else {
                     System.out.print(" ");
                 }
-
             }
             System.out.println();
         }
         for (int i = 0; i < width; i++) {
             System.out.print("* ");
         }
-
     }
+
+
 
     public static void main(String[] args) {
 
