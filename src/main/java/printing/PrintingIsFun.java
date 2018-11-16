@@ -3,7 +3,7 @@ package printing;
 public class PrintingIsFun {
 
 
-    void printRectangle(int height, int width) {
+    public void printRectangle(int height, int width) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 System.out.print("*");
@@ -12,7 +12,7 @@ public class PrintingIsFun {
         }
     }
 
-    void printTrianagle(int height) {
+    public void printTrianagle(int height) {
         for (int i = height; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 System.out.print("*");
@@ -21,7 +21,7 @@ public class PrintingIsFun {
         }
     }
 
-    void printTree(int height) {
+    public void printTree(int height) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < height * 2; j++) {
                 if (j < (height - i) || j > (height + i)) {
@@ -34,7 +34,7 @@ public class PrintingIsFun {
         }
     }
 
-    void printBox(int width, int heigth) {
+    public void printBox(int width, int heigth) {
 
         for (int i = 0; i < width; i++) {
             System.out.print("* ");
@@ -55,27 +55,6 @@ public class PrintingIsFun {
         }
     }
 
-
-
-    public static void main(String[] args) {
-
-        PrintingIsFun printingIsFun = new PrintingIsFun();
-
-        printingIsFun.printRectangle(8, 3);
-
-        System.out.println();
-
-        printingIsFun.printTrianagle(13);
-
-        System.out.println();
-
-        printingIsFun.printTree(8);
-
-        System.out.println();
-
-        printingIsFun.printBox(6, 3);
-
-    }
 
 
 }

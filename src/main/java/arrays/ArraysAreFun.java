@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 public class ArraysAreFun {
 
 
-    Integer[] merge(Integer[] first, Integer[] second) {
+    public Integer[] merge(Integer[] first, Integer[] second) {
         Integer[] merged = new Integer[first.length + second.length];
         for (int i = 0; i < first.length; i++) {
             merged[i] = first[i];
@@ -20,7 +20,7 @@ public class ArraysAreFun {
         return merged;
     }
 
-    Integer[] reverse(Integer[] array) {
+    public Integer[] reverse(Integer[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - i - 1];
@@ -29,7 +29,7 @@ public class ArraysAreFun {
         return array;
     }
 
-    Integer[] roll(Integer[] array, int amount) {
+    public Integer[] roll(Integer[] array, int amount) {
         LinkedHashSet<Integer> rolledSet = new LinkedHashSet<>();
         Integer[] rolledArray = new Integer[array.length];
         for (int i = amount; i < array.length; i++) {
@@ -44,25 +44,4 @@ public class ArraysAreFun {
     }
 
 
-    public static void main(String[] args) {
-
-
-        ArraysAreFun arraysAreFun = new ArraysAreFun();
-
-        Integer[] first = {1, 4, 5};
-        Integer[] second = {3, 5, 8};
-        Integer[] toReverse = {3, 7, 2, 4};
-        Integer[] toRoll = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-
-        System.out.println(Arrays.toString(arraysAreFun.merge(first, second)));
-
-        System.out.println();
-
-        System.out.println(Arrays.toString(arraysAreFun.reverse(toReverse)));
-
-        System.out.println();
-
-        System.out.println(Arrays.toString(arraysAreFun.roll(toRoll, 4)));
-
-    }
 }
