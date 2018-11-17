@@ -10,19 +10,23 @@ public class Main {
 
         PrintingIsFun printingIsFun = new PrintingIsFun();
 
-        System.out.println("printRectangle");printingIsFun.printRectangle(8, 3);
+        System.out.println("printRectangle");
+        printingIsFun.printRectangle(8, 3);
 
         System.out.println();
 
-        System.out.println("printTrianagle");printingIsFun.printTrianagle(13);
+        System.out.println("printTrianagle");
+        printingIsFun.printTrianagle(13);
 
         System.out.println();
 
-        System.out.println("printTree");printingIsFun.printTree(8);
+        System.out.println("printTree");
+        printingIsFun.printTree(8);
 
         System.out.println();
 
-        System.out.println("printBox");printingIsFun.printBox(6, 3);
+        System.out.println("printBox");
+        printingIsFun.printBox(6, 3);
 
         System.out.println();
 
@@ -47,6 +51,15 @@ public class Main {
 
         StringsAreFun stringsAreFun = new StringsAreFun();
 
-        System.out.println(stringsAreFun.isPalindrome("abccba"));
+        System.out.println("isPalindrome String " + stringsAreFun.isPalindrome("abccba"));
+
+        System.out.println();
+
+        System.out.println("countOccurences " + stringsAreFun.countOccurences("Lorem ipsum dolor sit amet", "or"));
+
+        System.out.println();
+
+        System.out.println("ROT13 " + stringsAreFun.rot13("abc"));
     }
 }
+
