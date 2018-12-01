@@ -14,9 +14,13 @@ public class ArraysAreFun {
         for (int j = first.length; j < first.length + second.length; j++) {
             merged[j] = second[j - first.length];
         }
-        TreeSet<Integer> sortedSet = new TreeSet<>(Arrays.asList(merged));
-        merged = sortedSet.toArray(new Integer[0]);
-
+        for (int k = 1; k < merged.length; k++) {
+            if (merged[k-1] > merged[k]) {
+                Integer temp = merged[k-1];
+                merged[k-1] = merged[k];
+                merged[k] = temp;
+            }
+        }
         return merged;
     }
 
@@ -57,4 +61,6 @@ public class ArraysAreFun {
         Integer [] result = sequence.toArray(new Integer[0]);
         return result;
     }
+
+
 }

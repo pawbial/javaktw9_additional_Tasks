@@ -58,11 +58,11 @@ public class Main {
 
         System.out.println();
 
-        System.out.println("countOccurences " + stringsAreFun.countOccurences("Lorem ipsum dolor sit amet", "or"));
+        System.out.println("countOccurences " + stringsAreFun.countOccurences("Lorem ipsum dolorrrrrrrr sit amet", "or"));
 
         System.out.println();
 
-        System.out.println("ROT13 " + stringsAreFun.rot13("abc"));
+        System.out.println("ROT13 " + stringsAreFun.rot13("xyz"));
 
         String x = "abc";
         String coded = stringsAreFun.rot13(x);

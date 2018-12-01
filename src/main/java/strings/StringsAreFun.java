@@ -24,7 +24,27 @@ public class StringsAreFun {
     }
 
     public int countOccurences (String string, String occurency) {
-        return StringUtils.countMatches(string, occurency);
+        if (!string.contains(occurency)) {
+            return 0;
+        }
+        char[] stringChars = string.toCharArray();
+        char[] occurencyChars = occurency.toCharArray();
+        int hit = 0;
+        int occurencyCount = 0;
+        for (int i = 0; i < stringChars.length; i++) {
+            for (int j = 0; j < occurencyChars.length; j++) {
+                if (stringChars[i] == occurencyChars[j]) {
+                    hit++;
+                    if (hit == occurencyChars.length) {
+                        hit = 0;
+                        occurencyCount++;
+                    }
+                }
+            }
+        }
+
+
+        return occurencyCount;
     }
 
     public String rot13 (String someString) {
