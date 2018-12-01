@@ -36,6 +36,7 @@ public class Main {
         Integer[] second = {3, 5, 8};
         Integer[] toReverse = {3, 7, 2, 4};
         Integer[] toRoll = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        Integer [] array = {5,6,2,4,7,9,3,5,6};
 
         System.out.println("merge" + Arrays.toString(arraysAreFun.merge(first, second)));
 
@@ -49,6 +50,8 @@ public class Main {
 
         System.out.println();
 
+        System.out.println("sequence" + Arrays.toString(arraysAreFun.longestGrowingTrent(array)));
+
         StringsAreFun stringsAreFun = new StringsAreFun();
 
         System.out.println("isPalindrome String " + stringsAreFun.isPalindrome("abccba"));
@@ -60,6 +63,12 @@ public class Main {
         System.out.println();
 
         System.out.println("ROT13 " + stringsAreFun.rot13("abc"));
+
+        String x = "abc";
+        String coded = stringsAreFun.rot13(x);
+        System.out.println(coded);
+        String decoded = stringsAreFun.decodeROT13(coded);
+        System.out.println(decoded);
     }
 }
 

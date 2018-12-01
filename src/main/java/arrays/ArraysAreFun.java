@@ -38,10 +38,23 @@ public class ArraysAreFun {
         for (int j = 0; j < amount; j++) {
             rolledSet.add(array[j]);
         }
-            return rolledArray = rolledSet.toArray(new Integer[0]);
-
+        return rolledArray = rolledSet.toArray(new Integer[0]);
 
     }
+    Integer [] array = {5,6,2,4,7,9,3,5,6};
+    public Integer[] longestGrowingTrent(Integer[] array) {
+        List <Integer> sequence = new ArrayList<>();
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] > array[i]) {
+                    sequence.add(array[i]);
+                    sequence.add(array[j]);
+                }
 
+            }
 
+        }
+        Integer [] result = sequence.toArray(new Integer[0]);
+        return result;
+    }
 }

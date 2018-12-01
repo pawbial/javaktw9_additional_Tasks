@@ -32,6 +32,14 @@ public class StringsAreFun {
         for (int i = 0; i < initialString.length; i++) {
             initialString[i] += 13;
         }
-        return Arrays.toString(initialString);
+        return new String(initialString);
+    }
+
+    public String decodeROT13 (String someString) {
+        char [] initialString = someString.toCharArray();
+        for (int i = 0; i < initialString.length; i++) {
+            initialString[i] -= 13;
+        }
+        return new String(initialString);
     }
 }
