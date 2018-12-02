@@ -58,17 +58,25 @@ public class Main {
 
         System.out.println();
 
-        System.out.println("countOccurences " + stringsAreFun.countOccurences("Lorem ipsum dolorrrrrrrr sit amet", "or"));
+        //aa bbb cc dd aa bbb cc dd bbb aa bbb ccc bbb
+
+        System.out.println("countOccurences " + stringsAreFun.countOccurences("aa bbb cc dd aa bbb cc dd bbb aa bbb ccc bbb", "bbb"));
 
         System.out.println();
 
-        System.out.println("ROT13 " + stringsAreFun.rot13("xyz"));
+        System.out.println("ROT13 " + stringsAreFun.rot13("abcdefghijklmnoprstuwxyz"));
 
-        String x = "abc";
+        String x = "xyz";
         String coded = stringsAreFun.rot13(x);
         System.out.println(coded);
         String decoded = stringsAreFun.decodeROT13(coded);
         System.out.println(decoded);
+
+
+        char a = 'a';
+        char b = (char) (a - 13);
+        char c = 'z';
+        System.out.println(Integer.valueOf(c));
     }
 }
 
