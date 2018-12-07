@@ -2,12 +2,6 @@ package strings;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class StringsAreFun {
 
     public boolean isPalindrome(String someString) {
@@ -32,27 +26,25 @@ public class StringsAreFun {
         char[] occurencyChars = occurency.toCharArray();
         int occurencyCount = 0;
         StringBuilder check = new StringBuilder();
-        char current = ' ';
-        char currentOccurency;
         for (int i = 0; i < stringChars.length; i++) {
             for (int j = 0; j < occurencyChars.length; j++) {
                 if (stringChars[i] == occurencyChars[j]) {
                     check.append(stringChars[i]);
-                    System.out.println(check);
-                    if (check.length()==occurency.length()) {
-                        if (check.toString().equals(occurency)) {
-                            occurencyCount++;
-                            check = new StringBuilder();
-                        } else
-                            check.deleteCharAt(check.lastIndexOf(String.valueOf(stringChars[i])));
-                    }
+                    if (!(check.length() == occurency.length())) {
+                        break;
+                    } else if (check.toString().equals(occurency)) {
+                        occurencyCount++;
+                        check = new StringBuilder();
+                    } else
+                        check.deleteCharAt(check.lastIndexOf(String.valueOf(stringChars[i])));
                 }
             }
         }
         if (occurency.length() <= 2) {
             return occurencyCount;
         } else
-        return occurencyCount / occurency.length();
+            return occurencyCount / occurency.length();
+
     }
 
 

@@ -1,7 +1,6 @@
 package arrays;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class ArraysAreFun {
 
@@ -15,9 +14,9 @@ public class ArraysAreFun {
             merged[j] = second[j - first.length];
         }
         for (int k = 1; k < merged.length; k++) {
-            if (merged[k-1] > merged[k]) {
-                Integer temp = merged[k-1];
-                merged[k-1] = merged[k];
+            if (merged[k - 1] > merged[k]) {
+                Integer temp = merged[k - 1];
+                merged[k - 1] = merged[k];
                 merged[k] = temp;
             }
         }
@@ -45,22 +44,38 @@ public class ArraysAreFun {
         return rolledArray = rolledSet.toArray(new Integer[0]);
 
     }
-    Integer [] array = {5,6,2,4,7,9,3,5,6};
+
+    Integer[] array = {5, 6, 2, 4, 7, 9, 3, 5, 6};
+
     public Integer[] longestGrowingTrent(Integer[] array) {
-        List <Integer> sequence = new ArrayList<>();
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] > array[i]) {
-                    sequence.add(array[i]);
-                    sequence.add(array[j]);
-                }
-
-            }
-
+        if (array.length == 0) {
+            return null;
         }
-        Integer [] result = sequence.toArray(new Integer[0]);
+        int longestStart = 0;
+        int currentStart = 0;
+        int longestLength = 1;
+        int currentLength = 1;
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[i - 1]) {
+                currentLength++;
+                if (currentLength > longestLength) {
+                    longestStart = currentStart;
+                    longestLength = currentLength;
+                }
+            } else {
+                currentStart = i;
+                currentLength = 1;
+            }
+        }
+        Integer[] result = new Integer[longestLength];
+        for (int i = 0; i < longestLength; i++) {
+            result[i] = array[longestStart + i];
+        }
         return result;
     }
 
-
 }
+
+
+

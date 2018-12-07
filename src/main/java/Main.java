@@ -59,8 +59,9 @@ public class Main {
         System.out.println();
 
         //aa bbb cc dd aa bbb cc dd bbb aa bbb ccc bbb
+        //Lorem ipsum dolor sit amet
 
-        System.out.println("countOccurences " + stringsAreFun.countOccurences("aa bbb cc dd aa bbb cc dd bbb aa bbb ccc bbb", "bbb"));
+        System.out.println("countOccurences " + stringsAreFun.countOccurences("Lorem ipsum dolor sit amet", "or"));
 
         System.out.println();
 
@@ -72,11 +73,6 @@ public class Main {
         String decoded = stringsAreFun.decodeROT13(coded);
         System.out.println(decoded);
 
-
-        char a = 'a';
-        char b = (char) (a - 13);
-        char c = 'z';
-        System.out.println(Integer.valueOf(c));
     }
 }
 
